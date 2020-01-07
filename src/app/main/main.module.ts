@@ -1,4 +1,4 @@
-import { NgModule } from "@angular/core";
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from "@angular/core";
 import { CommonModule } from "@angular/common";
 
 import { MainRoutingModule } from "./main-routing.module";
@@ -9,9 +9,10 @@ import { CartModule } from "../cart/cart.module";
 import { AdminModule } from "../admin/admin.module";
 import { UniversalModule } from "../universal/universal.module";
 import { HeaderComponent } from "./header/header.component";
+import { HomepageComponent } from "./homepage/homepage.component";
 
 @NgModule({
-  declarations: [MainComponent, HeaderComponent],
+  declarations: [MainComponent, HeaderComponent, HomepageComponent],
   imports: [
     CommonModule,
     MainRoutingModule,
@@ -20,6 +21,7 @@ import { HeaderComponent } from "./header/header.component";
     CartModule,
     AdminModule,
     UniversalModule
-  ]
+  ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class MainModule {}
