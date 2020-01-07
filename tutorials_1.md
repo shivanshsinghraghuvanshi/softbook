@@ -1,3 +1,32 @@
+Day 1 (07th Jan 2020) Angular Introduction
+Architecture
+Development Environment
+Structure of Angular Apps
+Introduction to WebPack
+What are Angular Versions and Upgrade Strategy on Angular platforms
+Introduction to TypeScript
+
+Day 2 (08th Jan 2020) Angular Fundamentals
+Event Handling and Data Displaying
+Building Reusable Components
+Angular Directives
+
+Day 3 (09th Jan 2020) Templates and Forms
+Reactive Forms
+Routing and Navigation
+
+Day 4 (10th Jan 2020) Consuming Http Services
+Observables and NGRX
+
+if time permits we will look into other modules
+
+What is angular
+Angular is an UI framework for developing web apps.
+How it is different from Angularjs
+ngular is a platform and framework for building client applications in HTML and TypeScript. Angular is written in TypeScript. It implements core and optional functionality as a set of TypeScript libraries that you import into your apps.
+
+Building Blocks of Angular
+
 1. Components
    Annotations are used to add metadata
    some important metadata are selectors
