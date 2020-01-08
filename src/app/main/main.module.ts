@@ -10,9 +10,11 @@ import { AdminModule } from "../admin/admin.module";
 import { UniversalModule } from "../universal/universal.module";
 import { HeaderComponent } from "./header/header.component";
 import { HomepageComponent } from "./homepage/homepage.component";
+import { ListComponent } from './list/list.component';
+import { CartComponent } from './cart/cart.component';
 
 @NgModule({
-  declarations: [MainComponent, HeaderComponent, HomepageComponent],
+  declarations: [MainComponent, HeaderComponent, HomepageComponent, ListComponent, CartComponent],
   imports: [
     CommonModule,
     MainRoutingModule,

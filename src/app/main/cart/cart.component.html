@@ -1,0 +1,32 @@
+<div class="container" [hidden]="!cart">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Movie Name</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr
+        *ngFor="let movie of myList; let i = index; let even = even"
+        [ngClass]="{ 'table-dark': even }"
+      >
+        <th scope="row">{{ i + 1 }}</th>
+        <td>{{ movie.name }}</td>
+        <td>
+          <button
+            type="button"
+            class="btn btn-danger"
+            (click)="removeFromCart(movie)"
+          >
+            Remove
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <br />
+</div>
