@@ -14,7 +14,8 @@ import { CartComponent } from "./cart/cart.component";
 import { PanelComponent } from "./panel/panel.component";
 import { DataFormatDirective } from "./data-format.directive";
 import { LifecycleComponent } from "./lifecycle/lifecycle.component";
-import { DetailsComponent } from './cart/details/details.component';
+import { DetailsComponent } from "./cart/details/details.component";
+import { RatingDirective } from "./directive/rating/rating.directive";
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { DetailsComponent } from './cart/details/details.component';
     PanelComponent,
     DataFormatDirective,
     LifecycleComponent,
-    DetailsComponent
+    DetailsComponent,
+    RatingDirective
   ],
   imports: [CommonModule, MainRoutingModule],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
