@@ -14,11 +14,41 @@ export class MovieService {
   }
 
   private _movies: IMovie[] = [
-    { id: 1, name: "X-Men", isAdded: false },
-    { id: 2, name: "Avengers", isAdded: false },
-    { id: 3, name: "Spiderman", isAdded: false },
-    { id: 4, name: "Deadpool", isAdded: false },
-    { id: 5, name: "Ant-man", isAdded: false }
+    {
+      id: 1,
+      name: "X-Men",
+      isAdded: false,
+      desc: "lorem epsum",
+      star: "Jennifer Lawerance"
+    },
+    {
+      id: 2,
+      name: "Avengers",
+      isAdded: false,
+      desc: "lorem epsum",
+      star: "Jennifer Lawerance"
+    },
+    {
+      id: 3,
+      name: "Spiderman",
+      isAdded: false,
+      desc: "lorem epsum",
+      star: "Toby Maguire"
+    },
+    {
+      id: 4,
+      name: "Deadpool",
+      isAdded: false,
+      desc: "lorem epsum",
+      star: "Ryan Renolds"
+    },
+    {
+      id: 5,
+      name: "Ant-man",
+      isAdded: false,
+      desc: "lorem epsum",
+      star: "Paul Rudd"
+    }
   ];
   public get counter(): number {
     return this._counter;
