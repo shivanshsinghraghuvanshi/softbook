@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NotificationService } from './notification.service';
 
 @Component({
   selector: 'softbook-notification',
@@ -6,10 +7,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./notification.component.scss']
 })
 export class NotificationComponent implements OnInit {
-
-  constructor() { }
+  
+  notifications:any;
+  constructor(private notificationService: NotificationService) { 
+    this.notifications = notificationService.notifications;
+  }
 
   ngOnInit() {
+    
   }
+
+  ngOnDestroy() {
+    this.notificationService.resetUnread();
+   }
+
 
 }

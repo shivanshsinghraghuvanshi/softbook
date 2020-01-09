@@ -1,7 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { MovieService } from "./movie.service";
 import { IResponse } from "../list/IResponse";
-import { Subscription } from "rxjs";
+import { NotificationService } from 'src/app/notification/notification.service';
 
 @Component({
   selector: "softbook-homepage",
@@ -10,22 +10,23 @@ import { Subscription } from "rxjs";
 })
 export class HomepageComponent implements OnInit {
   movies: any[];
-  counter: number = 0;
+  counter: number ;
   myList: any[] = [];
   cart: boolean = false;
   list: boolean = true;
-  _subcriber: Subscription;
-  constructor(private movieService: MovieService) {}
+  subscriber: any;
+
+  constructor(private movieService: MovieService, private notificationservice: NotificationService) {
+    this.movies = movieService.movies;
+    this.myList = movieService.myList;
+    this.counter = movieService.counter;
+    this.subscriber = movieService.countChange.subscribe((newCount)=>{
+      this.counter = newCount;
+    })
+  }
 
   ngOnInit() {
-    this.movies = this.movieService.movies;
-    this.myList = this.movieService.myList;
-    this.counter = this.movieService.counter;
-    this._subcriber = this.movieService.counterUpdate.subscribe(
-      (value: number) => {
-        this.counter = value;
-      }
-    );
+    
   }
   showList() {
     this.list = true;
@@ -38,18 +39,21 @@ export class HomepageComponent implements OnInit {
 
   addToMyList(response: IResponse) {
     this.myList.push(response.movie);
-    this.movieService.incrementCounter();
+    this.notificationservice.updateMovie(response.movie.name,true);
+    this.movieService.addCounter();
   }
 
   removeFromMyList(response: IResponse) {
     let index = this.myList.indexOf(response.movie);
     if (index > -1) {
       this.myList.splice(index, 1);
-      this.movieService.decrementCounter();
+      this.movieService.reduceCounter();
+
     }
+    this.notificationservice.updateMovie(response.movie.name,false);
   }
   ngOnDestry() {
-    this._subcriber.unsubscribe();
+    this.subscriber.unsubscribe();
   }
 }
 

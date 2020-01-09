@@ -1,30 +1,13 @@
 import { Injectable } from "@angular/core";
-import { Subject } from "rxjs";
+import { Subject } from 'rxjs';
 
 @Injectable({
   providedIn: "root"
 })
 export class MovieService {
-  private _counter: number = 0;
-  private _counterUpdate: Subject<number> = new Subject<number>();
-  public get counterUpdate(): Subject<number> {
-    return this._counterUpdate;
-  }
-  public set counterUpdate(value: Subject<number>) {
-    this._counterUpdate = value;
-  }
-  public get counter(): number {
-    return this._counter;
-  }
+  counter:number = 0;
+  countChange: Subject<number> = new Subject<number>();
 
-  incrementCounter(): void {
-    this._counter++;
-    this._counterUpdate.next(this._counter);
-  }
-  decrementCounter(): void {
-    this._counter--;
-    this._counterUpdate.next(this._counter);
-  }
   private _myList: IMovie[] = [];
   public get myList(): IMovie[] {
     return this._myList;
@@ -76,5 +59,16 @@ export class MovieService {
   public set movies(value) {
     this._movies = value;
   }
+
+  addCounter(){
+    this.counter++;
+    this.countChange.next(this.counter);
+  };
+
+  reduceCounter(){
+    this.counter--;
+    this.countChange.next(this.counter);
+  };
+
   constructor() {}
 }

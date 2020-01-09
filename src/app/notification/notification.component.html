@@ -1,1 +1,16 @@
-<p>notification workspace</p>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Time</th>
+        <th scope="col">Action</th>
+        <th scope="col">Movie</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let notification of notifications;">
+        <td>{{notification.time}}</td>
+        <td>{{notification.isAdded?'Added':'Removed'}}</td>
+        <td>{{notification.movie}}</td>
+      </tr>
+    </tbody>
+  </table>
