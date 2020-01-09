@@ -34,7 +34,8 @@ Routing and Navigation
 what is routing
 three steps to implement navigation
 
-1. COnfigure the routes which means what components should have visibility at each routes. it is mapping of path to component
+1. Configure the routes which means what components should have visibility at each routes.
+   it is mapping of path to component
 
 2. Add a router outlet this is where we dynamically display dynamic component when route become active
 3. Add links
@@ -50,7 +51,7 @@ routing with multiple parameters why needed is for search engine optimization / 
 
 Query Parameters / Optional Parameters [queryParams]="{}" .. add all optional parameters queryParamMap
 
-MUltiple Observer Subscription Observable.combineLatest([])
+Multiple Observer Subscription Observable.combineLatest([])
 SwitchMap vs map
 
 Programatic naviagation : Router router.navigate(['/path',<1>,<>],{queryParams:{}})

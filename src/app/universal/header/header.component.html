@@ -19,30 +19,33 @@
           <span class="sr-only">(current)</span></a
         >
       </li>
-      <li class="nav-item">
+      <!-- <li class="nav-item">
         <a class="nav-link" [routerLink]="['/cart']"
           ><h4>cart</h4>
           <span class="sr-only">(current)</span></a
         >
-      </li>
-      <li class="nav-item">
+      </li> -->
+      <!-- <li class="nav-item">
         <a class="nav-link" [routerLink]="['/user']"
           ><h4>user</h4>
           <span class="sr-only">(current)</span></a
         >
-      </li>
+      </li> -->
       <li class="nav-item">
-        <a class="nav-link" [routerLink]="['/admin']"
+        <a
+          class="nav-link"
+          [routerLink]="['/admin']"
+          [routerLinkActive]="active"
           ><h4>admin</h4>
           <span class="sr-only">(current)</span></a
         >
       </li>
-      <li class="nav-item justify-content-end">
+      <!-- <li class="nav-item justify-content-end">
         <a class="nav-link" [routerLink]="['/notifications']"
           ><h4>notifications</h4>
           <span class="sr-only">(current)</span></a
         >
-      </li>
+      </li> -->
     </ul>
   </div>
 </nav>
