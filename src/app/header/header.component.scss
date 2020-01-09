@@ -1,0 +1,44 @@
+.main{
+    background-image: url('../../assets/images/2.jpg');
+    height:1000px;
+    width:3000px;
+    scroll-behavior: auto;
+    position: absolute;
+}
+.header {
+    overflow: hidden;
+    background: transparent;
+    padding: 20px 10px;
+  }
+
+  .profile{
+  height:30px;
+  }
+  .header a {
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 25px;
+    border-radius: 4px;
+    
+  }
+  
+ .header a.logo {
+    font-size: 35px;
+    font-weight: bold;
+    color:red;
+  }
+  
+  .header-right {
+    float: right;
+    margin-left:500px;
+  }
+  .header-left{
+      float: left;
+  
+  }
+  
+  
