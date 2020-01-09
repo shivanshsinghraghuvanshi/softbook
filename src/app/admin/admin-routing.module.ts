@@ -1,14 +1,12 @@
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
 
-import { MainComponent } from "./main.component";
+import { AdminhomeComponent } from "./adminhome/adminhome.component";
 
-const routes: Routes = [{ path: "", component: MainComponent }];
+const routes: Routes = [{ path: "", component: AdminhomeComponent }];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class MainRoutingModule {}
-
-//<!--routerLink="/app/cart" -->
+export class AdminRoutingModule {}

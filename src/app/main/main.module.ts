@@ -8,22 +8,24 @@ import { NotificationModule } from "../notification/notification.module";
 import { CartModule } from "../cart/cart.module";
 import { AdminModule } from "../admin/admin.module";
 import { UniversalModule } from "../universal/universal.module";
-import { HeaderComponent } from "./header/header.component";
 import { HomepageComponent } from "./homepage/homepage.component";
-import { ListComponent } from './list/list.component';
-import { CartComponent } from './cart/cart.component';
+import { ListComponent } from "./list/list.component";
+import { CartComponent } from "./cart/cart.component";
+import { PanelComponent } from "./panel/panel.component";
+import { DataFormatDirective } from "./data-format.directive";
+import { LifecycleComponent } from "./lifecycle/lifecycle.component";
 
 @NgModule({
-  declarations: [MainComponent, HeaderComponent, HomepageComponent, ListComponent, CartComponent],
-  imports: [
-    CommonModule,
-    MainRoutingModule,
-    UserModule,
-    NotificationModule,
-    CartModule,
-    AdminModule,
-    UniversalModule
+  declarations: [
+    MainComponent,
+    HomepageComponent,
+    ListComponent,
+    CartComponent,
+    PanelComponent,
+    DataFormatDirective,
+    LifecycleComponent
   ],
+  imports: [CommonModule, MainRoutingModule],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class MainModule {}
