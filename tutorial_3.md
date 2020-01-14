@@ -50,18 +50,11 @@ route.snapshot
 routing with multiple parameters why needed is for search engine optimization / better link sharing
 
 Query Parameters / Optional Parameters [queryParams]="{}" .. add all optional parameters queryParamMap
+Programatic naviagation : Router router.navigate(['/path',<1>,<>],{queryParams:{}})
+Dynamic Module Lazy Loading
 
 Multiple Observer Subscription Observable.combineLatest([])
 SwitchMap vs map
 
-Programatic naviagation : Router router.navigate(['/path',<1>,<>],{queryParams:{}})
-Dynamic Module Lazy Loading
-
 Form Templates and Reactive Forms
 Consuming httpservice
-Authentication and Authorization
-
-Redux with ngrx
-Unit Testing and Integration Testing
-Deployment
-Animations

@@ -39,10 +39,29 @@
       </li>
       <li class="nav-item justify-content-end">
         <a class="nav-link" [routerLink]="['/notifications']"
-          ><h4>notifications<span class="badge badge-light">{{unread}}</span></h4>
-          
+          ><h4>
+            notifications<span class="badge badge-light">{{ unread }}</span>
+          </h4>
+
           <span class="sr-only">(current)</span></a
         >
+      </li>
+
+      <li>
+        <button
+          class="btn btn-primary"
+          *ngIf="!isAuthenticated"
+          (click)="login()"
+        >
+          Login
+        </button>
+        <button
+          class="btn btn-danger"
+          *ngIf="isAuthenticated"
+          (click)="logout()"
+        >
+          Logout
+        </button>
       </li>
     </ul>
   </div>
