@@ -1,1 +1,25 @@
-<div>It works</div>
+<br /><br />
+<div class="container">
+  <div class="row">
+    <button type="button" class="btn btn-outline-info" (click)="showList()">
+      Show List
+    </button>
+    <button type="button" class="btn btn-outline-info" (click)="showCart()">
+      Show Cart <span class="badge badge-success">{{ counter }}</span>
+    </button>
+  </div>
+</div>
+<br />
+<softbook-list
+  [list]="list"
+  [movies]="movies"
+  (addToMyList)="addToMyList($event)"
+  (removeFromMyList)="removeFromMyList($event)"
+  [counter]="counter"
+></softbook-list>
+<softbook-cart
+  [cart]="cart"
+  [myList]="myList"
+  [counter]="counter"
+  (removeFromMyList)="removeFromMyList($event)"
+></softbook-cart>
